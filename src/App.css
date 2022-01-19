@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*,body {
+  padding: 0;
+  margin: 0;
+  font-family: Ubuntu;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body, .App, #root{
+  height: 100%;
+  overflow-x: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* .App{
+  background: rgb(252, 252, 252);
+} */
+.header::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #0f0e0e4d;
+  left: 0;
+  top: 0;
+  z-index: 9;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-text{
+  /* background-filter: blur; */
+  backdrop-filter: blur(10px);
 }
-
-.App-link {
-  color: #61dafb;
+.shop{
+  z-index: 10;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search{
+  background-color: #ffffffaa;
 }
