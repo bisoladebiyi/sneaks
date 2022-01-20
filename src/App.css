@@ -8,9 +8,9 @@ html, body, .App, #root{
   height: 100%;
   overflow-x: hidden;
 }
-/* .App{
-  background: rgb(252, 252, 252);
-} */
+.App{
+  background: rgb(248, 247, 247);
+}
 .header::after{
   position: absolute;
   content: "";
@@ -29,5 +29,5 @@ html, body, .App, #root{
   z-index: 10;
 }
 .search{
-  background-color: #ffffffaa;
+  background-color: #ffffffc2;
 }
