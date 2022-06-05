@@ -40,18 +40,26 @@ const Item = () => {
       
   }
   return (
-    <div className="grid place-items-center h-full">
-        {product ? <div className="flex relative">
-      <button className="absolute left-0 bottom-0 p-2 bg-amber-500"><FavoriteBorderRounded className="text-red-800" /></button>
-        <img className="w-1/2" src={product?.media.imageUrl ? product?.media.imageUrl : alt} alt="" />
-        <div className="ml-10 pr-28">
+    <div className="grid place-items-center h-full px-10 pt-28 lg:pt-0 lg:px-0">
+        {product ? <div className="lg:flex">
+     
+      <div className="lg:w-1/2 mb-6 lg:mb-0">
+ 
+      <div className="w-full relative">
+      <button className="absolute left-0 bottom-0 p-1 sm:p-2 bg-amber-500"><FavoriteBorderRounded className="text-red-800 scale-75 sm:scale-100" /></button>
+      <img className="w-full" src={product?.media.imageUrl ? product?.media.imageUrl : alt} alt="" />
+      </div>
+      
+      </div>
+       
+        <div className="lg:ml-10 lg:pr-28 lg:w-1/2 pb-10 lg:pb-0 ">
           <div className="border-b border-gray-200 pb-4">
-            <p className="uppercase font-medium text-2xl mb-2">
+            <p className="uppercase font-medium text-lg sm:text-2xl mb-2">
               {product?.title}
             </p>
             <div className="flex justify-between w-5/6 mb-3">
-              <p className="text-green-700 uppercase">{product?.brand}</p>
-              <p className="text-sm text-gray-500">( for {product?.gender} )</p>
+              <p className="text-green-700 uppercase text-sm sm:text-base">{product?.brand}</p>
+              <p className="text-xs sm:text-sm text-gray-500">( for {product?.gender} )</p>
             </div>
             <p className="font-semibold text-xl">$ {product?.retailPrice}.00</p>
             <p className="text-gray-600 text-sm mt-4 leading-7">
@@ -64,7 +72,7 @@ const Item = () => {
           <div className="flex items-center border-b border-gray-200 py-4">
             <div className="flex items-center">
                 <label htmlFor="" className="font-semibold">Size:</label>
-              <FormControl sx={{ m: 1, minWidth: 80 }} className="ml-4"  size="small">
+              <FormControl sx={{ m: 1, minWidth: 80 }} className="ml-2 sm:ml-4 sm:scale-100 scale-75"  size="small">
                 <Select
                   id="demo-simple-select-autowidth"
                     value={size}
@@ -75,9 +83,9 @@ const Item = () => {
                 </Select>
               </FormControl>
             </div>
-            <div className="flex items-center ml-5">
+            <div className="flex items-center ml-3 sm:ml-5">
                 <label htmlFor="" className="font-semibold">Qty:</label>
-              <FormControl sx={{ m: 1, minWidth: 80 }} className="ml-4"  size="small">
+              <FormControl sx={{ m: 1, minWidth: 80 }} className="ml-2 sm:ml-4 sm:scale-100 scale-75"  size="small">
                 <Select
                   id="demo-simple-select-autowidth"
                     value={qty}
@@ -91,7 +99,7 @@ const Item = () => {
           </div>
           <div className="flex justify-between items-center pt-4">
           <p className="font-semibold text-xl">₦ {product?.retailPrice * qty}.00</p>
-          <button className={`${btnText === 'add to cart' ? 'bg-green-600' : 'bg-green-700'} text-white px-10 py-3 uppercase`} onClick={addItemToCart}>
+          <button className={`${btnText === 'add to cart' ? 'bg-green-600' : 'bg-green-700'} text-white px-10 py-2 text-sm sm:text-base sm:py-3 uppercase`} onClick={addItemToCart}>
               {btnText}
           </button>
           </div>
