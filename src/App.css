@@ -31,3 +31,29 @@ html, body, .App, #root{
 .search{
   background-color: #ffffffc2;
 }
+.cartProduct{
+  width: 70%;
+}
+.cartCheckout{
+  width: 25%;
+}
+.productName{
+  width:45%
+}
+.productInfo{
+  width: 52%;
+}
+@media(max-width:1279px){
+  .cartProduct, .cartCheckout{
+    width: 100%;
+  }
+  .productInfo, .productName{
+    width: 90%;
+  }
+}
+@media(max-width:600px){
+
+  .productInfo{
+    width: 100%;
+  }
+}

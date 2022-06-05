@@ -4,7 +4,7 @@ import React from 'react'
 const Features = () => {
     return (
         <div>
-            <div className="flex justify-between px-36 my-32">
+            <div className="grid grid-cols-2 gap-6 md:flex justify-between w-4/5 mx-auto md:w-auto md:px-10 lg:px-36 my-20 md:my-32">
                 <div className="flex items-center">
                     <EmojiEventsOutlined className="scale-150 text-gray-700" />
                     <div className="ml-4">
