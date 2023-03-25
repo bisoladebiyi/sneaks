@@ -7,7 +7,7 @@ export const fetch = async (url, params = {}) => {
         params,
         headers: {
           'x-rapidapi-host': 'v1-sneakers.p.rapidapi.com',
-          'x-rapidapi-key': '867cfdd7fbmshc045d91bbfb3aa7p1144d5jsn21d9b8ab1e6b'
+          'x-rapidapi-key': process.env.REACT_APP_API_KEY
         }
     }
       try{
